@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="vue.min.js"></script>
+	<script type="text/javascript" src="wall.js"></script>
+	<title>wall demo</title>
+
+</head>
+	<body>
+		<p class="marquee bulletin">这里是并没有公告的公告栏...这里是并没有公告的公告栏...</p>
+		<div id="message-view">
+			<div class="message">
+				<!-- <div class="sender"> -->
+					<img class="message-headimg" src=''></img>
+					<p class="message-sendername">{{showDatas[0].nickname}}</p>
+				<!-- </div> -->
+				<p class="message-content" v-if="show0">{{showDatas[0].content}}</p>
+				<div class="marquee-container" v-else>				
+					<p scrollamount="30px" class="message-content-m marquee">{{showDatas[0].content}}</p>
+				</div>
+			</div>
+			<div class="message">
+				<!-- <div class="sender"> -->
+					<img class="message-headimg" src=''></img>
+					<p class="message-sendername">{{showDatas[1].nickname}}</p>
+				<!-- </div> -->
+				<p class="message-content" v-if="show1">{{showDatas[1].content}}</p>
+				<div class="marquee-container" v-else>				
+					<p scrollamount="30px" class="message-content-m marquee">{{showDatas[1].content}}</p>
+				</div>
+			</div>
+			<div class="message">
+				<!-- <div class="sender"> -->
+					<img class="message-headimg" src=''></img>
+					<p class="message-sendername">{{showDatas[2].nickname}}</p>
+				<!-- </div> -->
+				<p class="message-content" v-if="show2">{{showDatas[2].content}}</p>
+				<div class="marquee-container" v-else>				
+					<p scrollamount="30px" class="message-content-m marquee">{{showDatas[2].content}}</p>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>
